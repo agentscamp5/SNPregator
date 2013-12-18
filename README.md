@@ -1,32 +1,6 @@
 SNPregator  V1.0.0
-Copyright (c) 2013, Alexander Paul
-All rights reserved.
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met: 
-
-1. Redistributions of source code must retain the above copyright notice, this
-   list of conditions and the following disclaimer. 
-2. Redistributions in binary form must reproduce the above copyright notice,
-   this list of conditions and the following disclaimer in the documentation
-   and/or other materials provided with the distribution. 
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
-ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
-ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-The views and conclusions contained in the software and documentation are those
-of the authors and should not be interpreted as representing official policies, 
-either expressed or implied, of the FreeBSD Project.
-
-Author: Alexander Paul
+Author: Alexander Paul (agentscamp5)
 
 SNPregator is a set of command-line tools used to collect aggregate data on Single Nucleotide Polymorphisms (SNPs) , as well as small Insertions and Deletions in the genome (INDELs). This data can be used to perform assocation tests like Fisher's Exact Test and Pearson's Chi-Square Test to determine if a SNP is associated with a particular group of samples being studied. The SNPs can also be filtered by these results, or by how density they are packed together, and can also be visualized graphically.
 
@@ -42,7 +16,7 @@ example.vcf:
 ...
 ...
 ...
-#CHROM  POS ID  REF ALT QUAL    FILTER  INFO    FORMAT  A   B   C   D   E   F   G   H   I   J   K
+"#CHROM  POS ID  REF ALT QUAL    FILTER  INFO    FORMAT  A   B   C   D   E   F   G   H   I   J   K"
 chrGroup1.1 1057    .   TATTTGGGA   T   999 PASS    AC=68;AF=0.773;AN=88;DP=0;FQ=999;INDEL;set=Intersection GT:GQ:PL    1/1:12:129,9,0  1/1:61:255,60,0 0/1:71:65,0,249 1/1:99:255,81,0 1/1:99:255,57,0 1/1:11:143,9,0  1/1:6:60,3,0    1/1:11:143,9,0  1/1:6:60,3,0    0/1:99:206,0,243    1/1:49:255,48,0
 chrGroup1.1 1116    .   T   A   161 PASS    AC=17;AF=0.293;AN=58;DP=0;G3=6.694e-07,1,3.567e-91;HWE=0.00271;set=Intersection GT:GQ:PL    0/0:69:0,66,201 0/0:51:0,49,255 0/0:36:0,36,242 ./. 0/1:16:13,0,255 0/1:12:9,0,154  0/0:17:0,12,108 ./. ./. ./. ./.
 chrGroup1.1 1152    .   G   A   999 PASS    AC=30;AF=0.385;AN=78;DP=0;set=Intersection  GT:GQ:PL    0/0:7:0,5,125   0/1:42:42,0,88  0/1:9:5,0,136   1/1:5:43,6,0    0/0:9:0,9,109   0/0:7:0,5,125   0/1:47:46,0,168 0/1:32:53,0,29  0/0:9:0,9,109   0/1:16:19,0,131 0/1:92:89,0,143
