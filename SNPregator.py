@@ -434,13 +434,18 @@ def graphbyinfo(infile,metric,chrom):
     xaxis = []
     yaxis = []
     for line in infile:
+        if "#CHROM" in line:
+            continue
         line = line.split("\t")
         if chrom and chrom != line[0]:
             continue
         if current_group == '':
             current_group = line[0]
         elif current_group != line[0]:
+            print current_group
             plt.scatter(xaxis,yaxis)
+            plt.xlabel("location in chromosome")
+            plt.ylabel("-log(value)")
             plt.show()
             xaxis = []
             yaxis = []
@@ -452,6 +457,8 @@ def graphbyinfo(infile,metric,chrom):
                 yaxis.append(val)
                 xaxis.append(int(line[1]))
     plt.scatter(xaxis,yaxis)
+    plt.xlabel("location in chromosome")
+    plt.ylabel("-log(value)")
     plt.show()
     infile.close()
 
